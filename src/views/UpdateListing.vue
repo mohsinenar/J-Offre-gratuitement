@@ -181,7 +181,6 @@
 <script>
 import { db, storage } from "../db";
 import imageuploader from "./ImageUploader.vue";
-import { required, maxLength, minLength } from "vuelidate/lib/validators";
 
 export default {
   data: function() {

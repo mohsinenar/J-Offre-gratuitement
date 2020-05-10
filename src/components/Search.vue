@@ -102,6 +102,9 @@ export default {
         city: this.City,
         category: this.category
       });
+      this.keyword = "";
+      this.City="";
+      this.category="";
       this.isActive = false;
       this.$router.push({name:"Home"})
     }

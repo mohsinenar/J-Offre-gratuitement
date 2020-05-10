@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="card">
-      <div class="card-image">
-        <b-carousel>
+      <div style="max-hieght:400px" class="card-image">
+        <b-carousel :arrow="false">
           <b-carousel-item v-for="(image, i) in Listing.images" :key="i">
             <span class="image">
               <img :src="image" />
@@ -92,7 +92,7 @@ export default {
         .then(snapshot => {
           this.Listing = snapshot.data();
           if (this.Listing.images.length == 0) {
-            this.images.push("../logo.png");
+            this.Listing.images.push("../no-pictures.svg");
             return;
           }
         });

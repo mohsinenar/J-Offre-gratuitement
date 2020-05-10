@@ -20,7 +20,7 @@ export default {
            imageRef:null,
            progress:0.0,
            uploadTask:{},
-           downloadURL:'./logo.png'
+           downloadURL:'./no-pictures.svg'
        }
     },
   name: 'imageuploader',

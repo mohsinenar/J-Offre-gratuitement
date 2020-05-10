@@ -36,7 +36,7 @@ export default {
     },
     LoadImages() {
       if (this.Listing.images.length == 0) {
-        this.Listing.images.push("./logo.png");
+        this.Listing.images.push("./no-pictures.svg");
         return;
       }
     }
