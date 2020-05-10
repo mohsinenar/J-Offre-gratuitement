@@ -9,7 +9,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // internal icons
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-Vue.use(require('vue-moment'));
+const moment = require('moment')
+require('moment/locale/fr')
+Vue.use(require('vue-moment'),{moment});
+
 
 library.add(fas);
 Vue.component('vue-fontawesome', FontAwesomeIcon);

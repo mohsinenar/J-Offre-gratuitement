@@ -1,14 +1,13 @@
 <template>
   <div>
     <section>
+      <h1 class="title has-text-centered"> Placer une annonce </h1>
       <b-steps
         v-model="currentStep"
         position="left"
-        label-position="Bottom"
         size="is-small"
         animated
         :rounded="false"
-        :vertical="true"
         v-bind:hasNavigation="false"
       >
         <!-- title  -->
@@ -19,9 +18,8 @@
             size="is-small"
             type="is-warning"
           >{{infoErrors.title.message}}</b-message>
-          <b-message size="is-small" type="is-info">Lorem ipsum dolor, sit</b-message>
 
-          <b-field label="J'offre Gratuitement:" label-position="outside">
+          <b-field label="Titre de votre annonce:" label-position="outside">
             <b-input size="is-medium" v-model="NewListing.title"></b-input>
           </b-field>
         </b-step-item>
@@ -36,7 +34,7 @@
           <b-message
             size="is-small"
             type="is-info"
-          >Merci de choisir la categorie correspond de votre offre:</b-message>
+          >Merci de choisir la categorie correspond de votre annonce:</b-message>
           <b-field label="categorie:">
             <b-select
               placeholder="maroc"
@@ -61,7 +59,7 @@
             size="is-small"
             type="is-warning"
           >{{infoErrors.Description.message}}</b-message>
-          <b-message size="is-small" type="is-info">describe your offre in some words</b-message>
+          <b-message size="is-small" type="is-info">veuillez décrire votre annonce en quelques mots</b-message>
           <b-field label-position="outside" label="Description de l'offre">
             <b-input
               size="is-small"
@@ -78,7 +76,6 @@
             size="is-small"
             type="is-warning"
           >{{infoErrors.city.message}}</b-message>
-          <b-message size="is-small" type="is-info">ville:</b-message>
           <b-field label="ville:">
             <b-select
               placeholder="maroc"
@@ -95,7 +92,7 @@
         <!-- end -->
         <b-step-item icon="images">
           <section>
-            <b-message size="is-small" type="is-info">ajouter des images pour votre offre</b-message>
+            <b-message size="is-small" type="is-info">Ajouter des images a votre annonce (optionale)</b-message>
           </section>
           <div class="section">
             <div class="columns is-clearfixed">
@@ -124,7 +121,7 @@
         <!-- conditions  -->
         <b-step-item icon="info">
      
-          <b-message size="is-small" type="is-info">conditions</b-message>
+          <b-message size="is-small" type="is-info">s'il y a une / des conditions pour bénéficier de cette offre, veuillez les indiquer ici</b-message>
           <b-field label-position="outside" label="conditions">
             <b-input size="is-small" type="textarea" v-model="NewListing.conditions"></b-input>
           </b-field>
@@ -137,7 +134,6 @@
             size="is-small"
             type="is-warning"
           >{{infoErrors.phone.message}}</b-message>
-          <b-message size="is-small" type="is-info">votre numero de telephone</b-message>
           <b-field label-position="outside" label="votre numero de telephone">
             <b-input size="is-medium" type="number" :min="10" v-model="NewListing.PhoneNumber"></b-input>
           </b-field>
@@ -284,7 +280,7 @@ export default {
     validate(next, field, validationObj) {
       console.log(field)
       if (field == "") {
-        validationObj.message = "(required)";
+        validationObj.message = "ce champ est obligatoire";
         validationObj.hasErrors = true;
         return false;
       } else {
@@ -328,7 +324,7 @@ export default {
       NewListingDoc.set(this.NewListing)
         .then((data) => {
           console.log(data)
-          this.$store.dispatch("openMessage",{text:"bien ajouter",type:"is-success"})
+          this.$store.dispatch("openMessage",{text:"votre annonce a bien été ajoutée, merci",type:"is-success"})
           this.ShowSuccess(NewListingDoc.id);
         })
         .catch((error) => {
@@ -362,8 +358,8 @@ export default {
 </script>
 <style>
 .imageuploader {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   border: 0.5px dashed yellow;
   margin: 5px;
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="card">
-      <div style="max-hieght:400px" class="card-image">
+      <div style="max-hieght:300px" class="card-image">
         <b-carousel :arrow="false">
           <b-carousel-item v-for="(image, i) in Listing.images" :key="i">
-            <span class="image">
-              <img :src="image" />
+            <span class="">
+              <img height="100%" :src="image" />
             </span>
           </b-carousel-item>
         </b-carousel>
@@ -38,7 +38,7 @@
       </div>
 
       <div v-show="logedIsOwner">
-        <b-field grouped>
+        <!-- <b-field grouped> -->
           <b-field>
             <b-button
               
@@ -48,7 +48,7 @@
               type="is-danger is-fullwidth"
             >Delete</b-button>
           </b-field>
-          <b-field>
+          <!-- <b-field>
             <b-button
               
               size="is-small"
@@ -56,8 +56,8 @@
               icon-left="trash"
               type="is-warning is-fullwidth"
             >Update</b-button>
-          </b-field>
-          <b-field>
+          </b-field> -->
+          <!-- <b-field>
             <b-button
               expanded
               size="is-small"
@@ -65,8 +65,8 @@
               icon-left="check"
               type="is-success is-fullwidth"
             >desactiver</b-button>
-          </b-field>
-        </b-field>
+          </b-field> -->
+        <!-- </b-field> -->
       </div>
     </div>
   </div>

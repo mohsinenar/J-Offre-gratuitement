@@ -3,7 +3,7 @@
     <div class="is-paddingless box media" style="padding:10px !important ">
       <div class="media-left">
         <span class="image is-96x96">
-          <img :src="Listing.images[0]" />
+          <img  style="height: 100% !important"  :src="Listing.images[0]" />
         </span>
       </div>
       <div class="media-content">

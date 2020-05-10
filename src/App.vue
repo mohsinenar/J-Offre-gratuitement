@@ -7,6 +7,7 @@
       <router-view />
     </div>
     <!-- bottom navigation -->
+    
     <div>
       <BottomNav v-show="!isSub"/>
     </div>

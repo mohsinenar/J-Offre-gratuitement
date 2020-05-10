@@ -26,7 +26,7 @@
         style="margin:0 5px"
         @click="Goto('/CreateAccount')"
         size="is-small"
-      >create account</b-button>
+      >créer un compte</b-button>
 
       <!-- login button -->
       <b-button
@@ -37,19 +37,19 @@
         style="margin:0 5px"
         @click="Goto('/login')"
         size="is-small"
-      >login</b-button>
+      >se connecter</b-button>
     </div>
 
     <b-sidebar type="is-light" fullheight overlay left :open.sync="NavbareOpen">
       <div style="padding:10px">
         <b-menu>
           <b-menu-list label="Menu">
-            <b-menu-item @click="Goto('/')" label="Home"></b-menu-item>
+            <b-menu-item @click="Goto('/')" label="Page d'accueil"></b-menu-item>
             <b-menu-item @click="Goto('/AddListing')" label="Ajouter un Offre"></b-menu-item>
             <b-menu-item @click="Goto('/MyOffres')" label="Mes Offres"></b-menu-item>
           </b-menu-list>
           <b-menu-list label="Actions">
-            <b-menu-item @click="logOut" label="Logout"></b-menu-item>
+            <b-menu-item @click="logOut" label="Déconnexion"></b-menu-item>
           </b-menu-list>
         </b-menu>
       </div>

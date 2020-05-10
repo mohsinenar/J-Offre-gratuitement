@@ -1,5 +1,5 @@
 <template>
-        <b-modal  has-modal-card :active="isActive">
+        <b-modal  style="padding:15px" size="is-small" has-modal-card :active="isActive">
               <b-notification auto-close @close="close" :type="message.type" has-icon aria-close-label="Close notification">{{message.text}}</b-notification>
         </b-modal>
 </template>

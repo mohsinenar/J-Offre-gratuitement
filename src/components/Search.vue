@@ -2,14 +2,14 @@
   <div>
     <template>
       <b-button icon-left="search" @click="isActive=true" size="is-small" type="is-text">
-        <span>search</span>
+        <span>chercher</span>
       </b-button>
     </template>
     <b-modal full-screen :active.sync="isActive" :width="640" scroll="keep">
       <section>
         <div class="modal-card" style="width: auto">
           <header class="modal-card-head">
-            <p class="modal-card-title">Rechercher</p>
+            <p class="modal-card-title">recherchez</p>
           </header>
           <section class="modal-card-body">
             <b-field label="mot de recherche">
@@ -23,12 +23,12 @@
                 expanded
                 icon-pack="fas"
               >
-                <option value="" selected>tous les categories</option>
+                <option value="" selected> tous les categories</option>
                 <option
                   v-for="(category,i) in categories"
                   v-bind:key="i"
                   :value="category"
-                >{{category}}</option>
+                > {{category}}</option>
               </b-select>
             </b-field>
             <b-field label="ville:">
@@ -39,8 +39,8 @@
             </b-field>
           </section>
           <footer class="modal-card-foot">
-            <button class="button is-fullwidth" type="button" @click="isActive=false">Close</button>
-            <button class="button is-fullwidth is-primary" @click="Search">chercher</button>
+            <button class="button is-fullwidth" type="button" @click="isActive=false">fermer</button>
+            <button class="button is-fullwidth is-primary" @click="Search">recherchez</button>
           </footer>
         </div>
       </section>
