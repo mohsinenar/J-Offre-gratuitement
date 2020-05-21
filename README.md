@@ -1,19 +1,7 @@
-# vue-cordova
+# J-Offre-gratuitement
 
-> A Vue.js project
+> A Cordova project based on  Vue.js 
 
-## Build Setup
+Demo
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
